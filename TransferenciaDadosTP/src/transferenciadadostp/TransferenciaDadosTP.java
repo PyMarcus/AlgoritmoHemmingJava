@@ -15,7 +15,6 @@ public class TransferenciaDadosTP {
         
         //"enviando" a informação do "smartphone" ao "servidor"
         seuSmartphone.enviaDado(umServidorQualquer);
-     
         //mensagem recebida no "servidor"
         System.out.println(umServidorQualquer.getMensagem());
         
