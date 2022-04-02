@@ -102,10 +102,7 @@ public class Receptor {
                 System.out.print(itens + " ");
             }
         }
-
         decodificarDado(bits);
-
-
     }
     
     
@@ -115,10 +112,6 @@ public class Receptor {
         for(int i = 0; i < bits.length; i++) System.out.print(bits[i] + " ");
         //aqui você deve trocar o médodo decofificarDado para decoficarDadoHemming (implemente!!)
         decodificarDadoHemming(bits);
-
-
         System.out.println("\n");
-
-
     }
 }

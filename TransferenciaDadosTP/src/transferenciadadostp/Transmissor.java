@@ -96,6 +96,7 @@ public class Transmissor {
         for(int i = 0; i < quantidade_hamming; i++){
             potencias_2[i] = (int) Math.pow(2, i);
         }
+
         boolean h1 = bits[0] ^ bits[1] ^ bits[3] ^ bits[4] ^ bits[6];
         boolean h2 = bits[0] ^ bits[2] ^ bits[3] ^ bits[5] ^ bits[6];
         boolean h3 = bits[1] ^ bits[2] ^ bits[3] ^ bits[7];
@@ -104,19 +105,18 @@ public class Transmissor {
         boolean[] hamming_vector = {h1, h2, h3, h4}; // hamming e o de 8 bits
         //System.out.println("h1: " + h1 + "h2: " + h2 + "h3: " + h3 + "h4: " + h4);
         // adiciona numero de hamming na posicao de potencia de 2:
+
         int contador = 0;
         int contador2 = 0;
         int contador3 = 0;
         boolean[] armazena = new boolean[hamming.length];
         for(int i = 1; i <= hamming.length; i++){
             if(i == potencias_2[contador]){
-
                 armazena[contador3] = hamming_vector[contador];
                 contador3 ++;
                 hamming[contador] = hamming_vector[contador];
                 if(contador < potencias_2.length - 1) contador ++;
             }else{
-
                 armazena[contador3] = bits[contador2];
                 contador3 ++;
                 hamming[contador2] = bits[contador2];
